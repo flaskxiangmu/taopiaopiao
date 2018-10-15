@@ -2,7 +2,7 @@ from flask_migrate import Migrate
 from flask_restful import Api
 from flask_session import Session
 
-
+from App.apis import Hello
 from App.models import db
 
 
@@ -15,7 +15,8 @@ def init_ext(app):
     # session
     app.config['SECRET_KEY'] = '100'
     app.config['SESSION_TYPE'] = 'redis'
-
+    api=Api(app)
+    api.add_resource(Hello,'/')
     Session(app=app)
     # sqlalchemy
     db.init_app(app=app)
