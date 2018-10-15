@@ -5,7 +5,7 @@ def get_db_uri(DATABASE):
     password = DATABASE.get('password') or '123456'
     host = DATABASE.get('host') or 'localhost'
     port = DATABASE.get('port') or '3306'
-    db = DATABASE.get('db') or 'FlaskDay03'
+    db = DATABASE.get('db')
     return '{}+{}://{}:{}@{}:{}/{}'.format(dialect, mysql, username, password, host, port, db)
 
 
@@ -27,7 +27,7 @@ class DevelopeConfig(Config):
         'password': '123456',
         'host': 'localhost',
         'port': '3306',
-        'db': 'FlaskDay03',
+        'db': 'Flask_Git',
     }
     SQLALCHEMY_DATABASE_URI = get_db_uri(DATABASE)
 
