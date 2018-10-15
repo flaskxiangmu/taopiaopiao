@@ -66,6 +66,7 @@ cats_fields = {
             'cat':fields.Nested(c_fields) #Nested指的是嵌套
 }
 
+
 class Cats(Resource):
     #获取所有的猫  查询的是单个对象
     @marshal_with(cats_fields)
