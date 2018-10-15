@@ -18,8 +18,6 @@ def init_ext(app):
 
     Session(app=app)
     # sqlalchemy
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@localhost:3306/FlaskDay05'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app=app)
 
     # 因为api能够路由，这时候就不用蓝图，也可以直接路由

@@ -76,6 +76,7 @@ class ProductConfig(Config):
 
 env = {
     'develop': DevelopeConfig,
+    'default': DevelopeConfig,
     'test': TestConfig,
     'show': ShowConfig,
     'product': ProductConfig,
